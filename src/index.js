@@ -1,10 +1,3 @@
-/**
-    ### Ruan David da Silva ###
-    ### B2B T08 ###############
-    Abaixo importei funções básicas do express para funcionamento da API
-    gosto de declarar uma constante para a porta para facil manutenção
-    também uma mensagem personalizada para cada vez que o app é inicializado
- */
 const express = require('express');
 const transactions = require('./routers/transactions');
 const userAccounts = require('./routers/userAccounts') ;
