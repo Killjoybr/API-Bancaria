@@ -1,0 +1,236 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "CubosBank",
+    "dateExported": "2023-09-17T17:05:16.792Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "3f4f1a05-937b-4e3a-a2b3-f5a5c82a32af",
+            "colId": "f165a01e-c37b-4761-888a-559352fb36b6",
+            "containerId": "",
+            "name": "accounts_listing",
+            "url": "http://localhost:8000/contas?senha_banco=Cubos123Bank",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-09-08T04:09:56.128Z",
+            "modified": "2023-09-08T04:10:58.793Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "senha_banco",
+                    "value": "Cubos123Bank",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "dc84d51d-85e7-422e-aa36-40f125b29492",
+            "colId": "f165a01e-c37b-4761-888a-559352fb36b6",
+            "containerId": "",
+            "name": "accounts_creating",
+            "url": "http://localhost:8000/contas?senha_banco=Cubos123Bank",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-09-08T04:11:16.770Z",
+            "modified": "2023-09-17T15:30:08.560Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "senha_banco",
+                    "value": "Cubos123Bank",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\":\"John Doe\",\n  \"cpf\":\"01058465297\",\n  \"data_nascimento\":\"05/08/1985\",\n  \"telefone\":\"+552198513-1523\",\n  \"email\":\"john@dilla.com\",\n  \"senha\":\"john\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "03485b68-4366-4621-83b9-621ecfec04b5",
+            "colId": "f165a01e-c37b-4761-888a-559352fb36b6",
+            "containerId": "",
+            "name": "account_updating",
+            "url": "http://localhost:8000/contas/1/usuario?senha_banco=Cubos123Bank",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-09-08T19:51:58.896Z",
+            "modified": "2023-09-16T20:34:33.549Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "senha_banco",
+                    "value": "Cubos123Bank",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n\"nome\":\"Ruan\",\n\"cpf\":\"02326542\",\n\"data_nascimento\":\"04/10/2001\",\n\"telefone\":\"661958236\",\n\"email\":\"ruan.david@hotmail.com\",\n\"senha\":\"dvd01\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2fbd0974-4af7-4632-9864-360da10642a7",
+            "colId": "f165a01e-c37b-4761-888a-559352fb36b6",
+            "containerId": "",
+            "name": "account_delete",
+            "url": "http://localhost:8000/contas/1?senha_banco=Cubos123Bank",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-09-08T20:46:11.477Z",
+            "modified": "2023-09-15T16:00:55.227Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "senha_banco",
+                    "value": "Cubos123Bank",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "a8f1af30-7dd0-4d3e-aab6-ed89f653272f",
+            "colId": "f165a01e-c37b-4761-888a-559352fb36b6",
+            "containerId": "",
+            "name": "account_deposit",
+            "url": "http://localhost:8000/transacoes/depositar?senha_banco=Cubos123Bank",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-09-09T01:32:32.188Z",
+            "modified": "2023-09-15T01:43:09.458Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "senha_banco",
+                    "value": "Cubos123Bank",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"numero_conta\":2,\n  \"valor\":50000\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9a60162a-6fad-4194-8c05-28e86b3c7759",
+            "colId": "f165a01e-c37b-4761-888a-559352fb36b6",
+            "containerId": "",
+            "name": "account_withdraw",
+            "url": "http://localhost:8000/transacoes/sacar?senha_banco=Cubos123Bank",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-09-09T14:12:34.500Z",
+            "modified": "2023-09-17T15:32:38.792Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "senha_banco",
+                    "value": "Cubos123Bank",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"numero_conta\":2,\n  \"valor\":26539,\n  \"senha\":\"john\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f2379f82-5343-4233-96f6-146ef73df957",
+            "colId": "f165a01e-c37b-4761-888a-559352fb36b6",
+            "containerId": "",
+            "name": "account_transfer",
+            "url": "http://localhost:8000/transacoes/transferir?senha_banco=Cubos123Bank",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2023-09-09T22:25:11.782Z",
+            "modified": "2023-09-17T15:29:26.520Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "senha_banco",
+                    "value": "Cubos123Bank",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n\t\"numero_conta_origem\": \"2\",\n\t\"numero_conta_destino\": \"1\",\n\t\"valor\": 2000,\n\t\"senha\": \"john\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1cdfe524-5819-4448-9b43-c7c5ffeb4ec8",
+            "colId": "f165a01e-c37b-4761-888a-559352fb36b6",
+            "containerId": "",
+            "name": "account_balance",
+            "url": "http://localhost:8000/contas/saldo?numero_conta=1&senha=dvd01",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2023-09-10T02:40:16.783Z",
+            "modified": "2023-09-17T15:45:45.314Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "numero_conta",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "senha",
+                    "value": "dvd01",
+                    "isPath": false
+                },
+                {
+                    "name": "senha_banco",
+                    "value": "Cubos123Bank",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "3ab4682d-af2e-4b38-8515-5f99a8d6f864",
+            "colId": "f165a01e-c37b-4761-888a-559352fb36b6",
+            "containerId": "",
+            "name": "account_extract",
+            "url": "http://localhost:8000/contas/extrato?numero_conta=1&senha=dvd01",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2023-09-10T03:01:09.104Z",
+            "modified": "2023-09-17T16:37:23.652Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "numero_conta",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "senha",
+                    "value": "dvd01",
+                    "isPath": false
+                },
+                {
+                    "name": "senha_banco",
+                    "value": "Cubos123Bank",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        }
+    ]
+}

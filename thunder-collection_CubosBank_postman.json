@@ -1,0 +1,297 @@
+{
+    "info": {
+        "_postman_id": "995db379-482c-4a9c-9922-c3dc08408468",
+        "name": "CubosBank",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "accounts_listing",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8000/contas?senha_banco=Cubos123Bank",
+                    "query": [
+                        {
+                            "key": "senha_banco",
+                            "value": "Cubos123Bank"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "contas"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000"
+                }
+            }
+        },
+        {
+            "name": "accounts_creating",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:8000/contas?senha_banco=Cubos123Bank",
+                    "query": [
+                        {
+                            "key": "senha_banco",
+                            "value": "Cubos123Bank"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "contas"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"nome\":\"John Doe\",\n  \"cpf\":\"01058465297\",\n  \"data_nascimento\":\"05/08/1985\",\n  \"telefone\":\"+552198513-1523\",\n  \"email\":\"john@dilla.com\",\n  \"senha\":\"john\"\n}"
+                }
+            }
+        },
+        {
+            "name": "account_updating",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://localhost:8000/contas/1/usuario?senha_banco=Cubos123Bank",
+                    "query": [
+                        {
+                            "key": "senha_banco",
+                            "value": "Cubos123Bank"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "contas",
+                        "1",
+                        "usuario"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n\"nome\":\"Ruan\",\n\"cpf\":\"02326542\",\n\"data_nascimento\":\"04/10/2001\",\n\"telefone\":\"661958236\",\n\"email\":\"ruan.david@hotmail.com\",\n\"senha\":\"dvd01\"\n}"
+                }
+            }
+        },
+        {
+            "name": "account_delete",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:8000/contas/1?senha_banco=Cubos123Bank",
+                    "query": [
+                        {
+                            "key": "senha_banco",
+                            "value": "Cubos123Bank"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "contas",
+                        "1"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000"
+                }
+            }
+        },
+        {
+            "name": "account_deposit",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:8000/transacoes/depositar?senha_banco=Cubos123Bank",
+                    "query": [
+                        {
+                            "key": "senha_banco",
+                            "value": "Cubos123Bank"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "transacoes",
+                        "depositar"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"numero_conta\":2,\n  \"valor\":50000\n}"
+                }
+            }
+        },
+        {
+            "name": "account_withdraw",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:8000/transacoes/sacar?senha_banco=Cubos123Bank",
+                    "query": [
+                        {
+                            "key": "senha_banco",
+                            "value": "Cubos123Bank"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "transacoes",
+                        "sacar"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"numero_conta\":2,\n  \"valor\":26539,\n  \"senha\":\"john\"\n}"
+                }
+            }
+        },
+        {
+            "name": "account_transfer",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:8000/transacoes/transferir?senha_banco=Cubos123Bank",
+                    "query": [
+                        {
+                            "key": "senha_banco",
+                            "value": "Cubos123Bank"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "transacoes",
+                        "transferir"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n\t\"numero_conta_origem\": \"2\",\n\t\"numero_conta_destino\": \"1\",\n\t\"valor\": 2000,\n\t\"senha\": \"john\"\n}"
+                }
+            }
+        },
+        {
+            "name": "account_balance",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8000/contas/saldo?numero_conta=1&senha=dvd01",
+                    "query": [
+                        {
+                            "key": "numero_conta",
+                            "value": "1"
+                        },
+                        {
+                            "key": "senha",
+                            "value": "dvd01"
+                        },
+                        {
+                            "key": "senha_banco",
+                            "value": "Cubos123Bank",
+                            "disabled": true
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "contas",
+                        "saldo"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000"
+                }
+            }
+        },
+        {
+            "name": "account_extract",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8000/contas/extrato?numero_conta=1&senha=dvd01",
+                    "query": [
+                        {
+                            "key": "numero_conta",
+                            "value": "1"
+                        },
+                        {
+                            "key": "senha",
+                            "value": "dvd01"
+                        },
+                        {
+                            "key": "senha_banco",
+                            "value": "Cubos123Bank",
+                            "disabled": true
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "contas",
+                        "extrato"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000"
+                }
+            }
+        }
+    ]
+}
